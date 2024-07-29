@@ -34,11 +34,11 @@ tipo_fonte = obter_int("Digite o número correspondente à fonte desejada.\n1-Fo
 if tipo_fonte == 2:
     altura_fonte = obter_float("Digite a altura da fonte (cm): ")
     raio_fonte = obter_float("Digite o raio da fonte (cm): ")
-    qtde_passos = obter_int("Digite a quantidade de deslocamentos da fonte até a abertura: ")
+    qtde_passos = obter_int("Digite o valor do incremento da altura da fonte: ")
     sorteios = obter_int("Digite a quantidade de sorteios por altura: ")
     
     f.fonte_volumetrica(altura_abertura, raio_abertura, raio_fonte, altura_fonte, qtde_passos, sorteios)
 else:
     sorteios = obter_int("Digite a quantidade de sorteios por altura: ")
-    qtde_passos = obter_int("Digite a quantidade de deslocamentos da fonte até a abertura: ")
+    qtde_passos = obter_int("Digite o valor do incremento da altura da fonte: ")
     f.fonte_pontual(altura_abertura, raio_abertura, qtde_passos, sorteios)
