@@ -1,4 +1,4 @@
-import fonte_volumetrica.main as f
+import fonte_volumetrica.simulacao as f
 
 def obter_float(mensagem):
     while True:
@@ -37,8 +37,8 @@ if tipo_fonte == 2:
     qtde_passos = obter_int("Digite a quantidade de deslocamentos da fonte até a abertura: ")
     sorteios = obter_int("Digite a quantidade de sorteios por altura: ")
     
-    f.fonte_volumetrica(altura_abertura, raio_abertura, raio_fonte, altura_fonte, qtde_passos, sorteios, True)
+    f.fonte_volumetrica(altura_abertura, raio_abertura, raio_fonte, altura_fonte, qtde_passos, sorteios)
 else:
     sorteios = obter_int("Digite a quantidade de sorteios por altura: ")
     qtde_passos = obter_int("Digite a quantidade de deslocamentos da fonte até a abertura: ")
-    f.fonte_volumetrica(altura_abertura, raio_abertura, 0, 0, qtde_passos, sorteios, False)
+    f.fonte_pontual(altura_abertura, raio_abertura, qtde_passos, sorteios)
