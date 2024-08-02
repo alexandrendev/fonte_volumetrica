@@ -7,4 +7,4 @@ set ylabel "Vazão"
 set grid
 
 plot "DATA_PONTUAL.txt" u 2:1 w lp lw 0.9 pt 5 ps 0.7 lc rgb "red" title "vazão em função da altura", \
-"" u 2:(1000 - $1) w lp lw 0.9 pt 5 ps 0.7 lc rgb "blue" title "emissões que permaneceram na câmara"
+"" u 2:(10000000 - $1) w lp lw 0.9 pt 5 ps 0.7 lc rgb "blue" title "emissões que permaneceram na câmara"
