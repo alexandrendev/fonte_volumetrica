@@ -6,6 +6,10 @@ Este projeto é uma continuação do projeto `Simulacao-MonteCarlo`, que se trat
 
 Este projeto é uma simulação de fontes isotrópicas em um contexto geométrico. A simulação modela uma fonte que emite partículas de maneira isotrópica (em todas as direções) e uma abertura localizada acima dessa fonte. A altura da fonte pode variar, bem como o tipo desta fonte (pontual ou volumétrica) e o objetivo da simulação é verificar se as partículas emitidas passam através da abertura.
 
+Para ilustrar o contexto da simulação, veja o esboço do plano cartesiano abaixo:
+
+<img src="assets/esboço-contexto-geometrico.png">
+
 O algoritmo realiza simulações e armazena os valores em um arquivo. Esses dados são posteriormente utilizados para plotar gráficos com o gnuplot.
 
 ### Tecnologias e Ferramentas Utilizadas
