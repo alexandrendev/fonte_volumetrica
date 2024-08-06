@@ -9,12 +9,13 @@ def sorteia_pontos(centro, altura, raio_abertura):
     y = centro[1]
     z = centro[2]
 
-    if(theta != (np.pi / 2)):
+    #theta < pi/2 (Direção acima do eixo x)
+    if(theta < (np.pi / 2)):
         # t = altura - z * np.cos(theta_sorteado)
-        eixo_x = x + (altura - z) * np.tan(theta) * np.cos(phi)
-        eixo_y = y + (altura - z) * np.tan(theta) * np.sin(phi)
+        eixo_x = x + abs((altura - z)) * np.tan(theta) * np.cos(phi)
+        eixo_y = y + abs((altura - z)) * np.tan(theta) * np.sin(phi)
 
-    else: return
+    else: return False
 
     '''
     ///////SE OS VALORES DE x E y ESTIVEREM DENTRO DO RAIO DA ABERTURA//////
@@ -32,19 +33,18 @@ def sorteia_pontos_acima_da_abertura(centro, altura, raio_abertura):
     x = centro[0] 
     y = centro[1]
     z = centro[2]
-
-    if (theta != np.pi / 2 and theta < np.pi / 2):
-        eixo_x = x + (altura - z) * np.tan(theta) * np.cos(phi)
-        eixo_y = y + (altura - z) * np.tan(theta) * np.sin(phi)
+    if (theta > (np.pi / 2)):
+        eixo_x = x + (z - altura) * np.tan(theta) * np.cos(phi)
+        eixo_y = y + (z - altura) * np.tan(theta) * np.sin(phi)
         
-    else: return
+    else: return False
 
     if(eixo_x >= -raio_abertura and eixo_x <= raio_abertura):
         if(eixo_y >= -raio_abertura and eixo_y <= raio_abertura):
             # pts_no_angulo += 1
             # Caiu dentro da câmara
-            return False
-    return True
+            return True
+    return False
         
 def sorteia_novo_centro(raio_cilindro, altura_cilindro, base_cilindro):
     x = np.random.uniform(-raio_cilindro, raio_cilindro)
