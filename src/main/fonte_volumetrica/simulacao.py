@@ -20,7 +20,7 @@ def fonte_volumetrica(altura_abertura, raio_abertura, raio_cilindro, altura_cili
                 if(sorteia_pontos(ponto, altura_abertura, raio_abertura)):
                     pts_no_angulo += 1
             elif(ponto[2] > altura_abertura):
-                if(sorteia_pontos_acima_da_abertura(ponto, altura_abertura, raio_abertura)):
+                if(not sorteia_pontos_acima_da_abertura(ponto, altura_abertura, raio_abertura)):
                     pts_no_angulo += 1
                     
         salvar_arquivo(arquivo, topo_fonte, pts_no_angulo)
@@ -40,7 +40,7 @@ def fonte_pontual(altura_abertura, raio_abertura, incremento, sorteios):
                 if(sorteia_pontos(ponto, altura_abertura, raio_abertura)):
                     pts_no_angulo += 1   
             elif(altura_ponto > altura_abertura):
-                if(sorteia_pontos_acima_da_abertura(ponto, altura_abertura, raio_abertura)):
+                if(not sorteia_pontos_acima_da_abertura(ponto, altura_abertura, raio_abertura)):
                     pts_no_angulo += 1
             
         arquivo_pontual = f'src/main/fonte_volumetrica/arquivos_gerados/DATA_PONTUAL.txt'
