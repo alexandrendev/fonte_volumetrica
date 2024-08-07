@@ -54,7 +54,7 @@ Essa análise não apenas valida a configuração geométrica e a natureza isotr
 
 | Fonte extensa | Fonte Pontual |
 |-----|-----|
-| <img src="src/main/fonte_volumetrica/arquivos_gerados/fonteVolumetrica.png"> |
+| <img src="src/main/fonte_volumetrica/arquivos_gerados/fonteVolumetrica.png"> | <img src="src/main/fonte_volumetrica/arquivos_gerados/fontePontual.png"> |
 
 Os arquivos com os dados obtidos através dessa simulação pode ser encontrado em: `src/main/fonte_volumetrica/arquivos_gerados/`
 
