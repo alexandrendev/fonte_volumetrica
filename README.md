@@ -38,7 +38,7 @@ Foram realizadas duas simulações distintas para avaliar o comportamento das em
 
 A seguir estão os detalhes das simulações realizadas:
 
-## fonte extensa:
+## Sobre as simulações:
 
 Para realizar as simulações, é necessário fornecer valores dos elementos pertencentes ao contexto. Essas dimensões podem ser conferidas na representação a seguir: 
 
