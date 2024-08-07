@@ -8,7 +8,9 @@ Este projeto é uma simulação de fontes isotrópicas em um contexto geométric
 
 Para ilustrar o contexto da simulação, veja o esboço do plano cartesiano abaixo:
 
-<img src="assets/esboço-contexto-geometrico.png">
+| Esboço do contexto simulado |
+|-----|
+| <img src="assets/esboço-contexto-geometrico.png"> |
 
 O algoritmo realiza simulações e armazena os valores em um arquivo. Esses dados são posteriormente utilizados para plotar gráficos com o gnuplot.
 
@@ -26,6 +28,41 @@ A simulação realizada neste projeto é particularmente útil no contexto de c�
 
 ## Objetivos
 
-- Verificação da Abertura: Avaliar se as direções das partículas emitidas atingem a altura da abertura. Caso atinjam, determinar se, na altura da abertura, a direção da partícula está dentro do raio da abertura, indicando a vazão através da mesma.
+- __Analisar o comportamento da vazão de partículas:__ Estudar como a vazão de partículas emitidas por uma fonte isotrópica varia em função da altura da fonte. Esse objetivo inclui a avaliação detalhada dos dados simulados para identificar padrões e tendências.
+
+- __Gerar e interpretar gráficos__ Criar gráficos que representem a relação entre a vazão de partículas e a altura da fonte, permitindo uma visualização clara das mudanças na vazão em função da altura.
+
+# Resultados obtidos
+
+Foram realizadas duas simulações distintas para avaliar o comportamento das emissões. A primeira simulação utilizou uma fonte extensa, enquanto a segunda empregou uma fonte pontual. Em ambas as simulações, a fonte emitiu um total de 10 milhões de partículas para cada altura avaliada. Esses experimentos permitiram uma análise detalhada da vazão das partículas através da abertura em função da altura da fonte.
+
+A seguir estão os detalhes das simulações realizadas:
+
+## fonte extensa:
+
+Para realizar as simulações, é necessário fornecer valores dos elementos pertencentes ao contexto. Essas dimensões podem ser conferidas na representação a seguir: 
+
+| Fonte Extensa | Fonte Pontual |
+|-----|-----|
+| <img src="assets/dimensões da simulação.png"> | <img src="assets/dimensoes-pontual.png"> |
+
+## Vazão x Altura
+
+Para a fonte extensa, a relação entre vazão e altura foi meticulosamente analisada. Inicialmente, a vazão de partículas que atravessam a abertura aumenta rapidamente à medida que a altura da fonte é elevada. Isso é representado graficamente, onde notamos um rápido crescimento inicial na vazão. No entanto, conforme a altura continua a aumentar, a taxa de crescimento da vazão começa a se estabilizar, formando uma reta que gradualmente se aproxima de uma linha horizontal. Esse comportamento de saturação ocorre porque, além de uma certa altura, a maioria das partículas que poderia atravessar a abertura já o faz, resultando em um aumento marginal na vazão adicional. Assim, o gráfico evidencia que, para alturas mais elevadas, a vazão de partículas atinge um valor quase constante, refletindo a limitação física imposta pela abertura. 
+
+Essa análise não apenas valida a configuração geométrica e a natureza isotrópica da fonte, mas também fornece insights valiosos sobre a eficiência de detecção em sistemas de abertura limitada, como câmaras de ionização. Os dados coletados e as visualizações geradas são fundamentais para aprimorar a compreensão desses sistemas, contribuindo para o desenvolvimento de dispositivos mais precisos e eficientes.
+
+| Fonte extensa | Fonte Pontual |
+|-----|-----|
+| <img src="src/main/fonte_volumetrica/arquivos_gerados/fonteVolumetrica.png"> |
+
+Os arquivos com os dados obtidos através dessa simulação pode ser encontrado em: `src/main/fonte_volumetrica/arquivos_gerados/`
+
+
+
+
+
+
+
 
 
