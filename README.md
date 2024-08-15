@@ -48,14 +48,26 @@ Para realizar as simulações, é necessário fornecer valores dos elementos per
 
 ## Vazão x Altura
 
-Para ambas as fontes, a relação entre vazão e altura foi meticulosamente analisada. Inicialmente, a vazão de partículas que atravessam a abertura aumenta rapidamente à medida que a altura da fonte é elevada. Isso é representado graficamente, onde notamos um rápido crescimento inicial na vazão. No entanto, conforme a altura continua a aumentar, a taxa de crescimento da vazão começa a se estabilizar, formando uma reta que gradualmente se aproxima de uma linha horizontal. Esse comportamento de **saturação** ocorre porque, além de uma certa altura, a maioria das partículas que poderia atravessar a abertura já o faz, resultando em um aumento marginal na vazão adicional. Assim, o gráfico evidencia que, para alturas mais elevadas, a vazão de partículas atinge um valor quase constante, refletindo a limitação física imposta pela abertura. 
+Inicialmente, a vazão de partículas que atravessam a abertura aumenta rapidamente à medida que a altura da fonte é elevada. Isso é representado graficamente, onde notamos um rápido crescimento inicial na vazão. No entanto, conforme a altura continua a aumentar, a taxa de crescimento da vazão começa a se estabilizar, formando uma reta que gradualmente se aproxima de uma linha horizontal. Esse comportamento de **saturação** ocorre porque, além de uma certa altura, a maioria das partículas que poderia atravessar a abertura já o faz, resultando em um aumento marginal na vazão adicional. Assim, o gráfico evidencia que, para alturas mais elevadas, a vazão de partículas atinge um valor quase constante, refletindo a limitação física imposta pela abertura. 
 
 Essa análise não apenas valida a configuração geométrica e a natureza isotrópica da fonte, mas também fornece insights valiosos sobre a eficiência de detecção em sistemas de abertura limitada, como câmaras de ionização. Os dados coletados e as visualizações geradas são fundamentais para aprimorar a compreensão desses sistemas, contribuindo para o desenvolvimento de dispositivos mais precisos e eficientes.
 
+## Estimação do ângulo sólido com base nos dados obtidos
+
+Para ambas as fontes, a relação entre vazão e altura foi meticulosamente analisada. Com base nos valores obtidos, é possível estimar o valor do ângulo sólido que corresponde à abertura com o seguinte cálculo:
+
+`Ângulo sólido parcial = `  $\Omega$ = $\\frac{(4 * \pi) * \text{Pontos no angulo sólido}}{\text{Total de pontos sorteados}} \$
+
+<br/>
+Após realizar o cálculo é possível gerar gráficos como os que estão logo abaixo.
+
 | Fonte extensa | Fonte Pontual |
 |-----|-----|
-| <img src="src/main/fonte_volumetrica/arquivos_gerados/fonteVolumetrica.png"> | <img src="src/main/fonte_volumetrica/arquivos_gerados/fontePontual.png"> |
+| <img src="src/main/fonte_volumetrica/arquivos_gerados/volumetrica/fonteVolumetrica.png"> | <img src="src/main/fonte_volumetrica/arquivos_gerados/pontual/fontePontual.png"> |
 
+Com isso, pode ser observar que conforme a altura das fontes é variada, cada vez mais o cálculo se aproxima ao ângulo sólido total. Após uma certa altura, nota-se uma saturação que demonstra uma tendência de estabilização no valor do ângulo sólido total (`4π`).
+
+----------------------------------------------------------------------------------------------
 Os arquivos com os dados obtidos através dessa simulação podem ser encontrados em: `src/main/fonte_volumetrica/arquivos_gerados/`
 
 
