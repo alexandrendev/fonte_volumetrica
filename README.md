@@ -4,7 +4,7 @@ Este projeto é uma continuação do projeto `Simulacao-MonteCarlo`, que se trat
 
 ## Sobre o projeto
 
-Este projeto é uma simulação de fontes isotrópicas em um contexto geométrico. A simulação modela uma fonte que emite partículas de maneira isotrópica (em todas as direções) e uma abertura localizada acima dessa fonte. A altura da fonte pode variar, bem como o tipo desta fonte (pontual ou volumétrica) e o objetivo da simulação é verificar se as partículas emitidas passam através da abertura.
+Este projeto é uma simulação de fontes isotrópicas em um contexto geométrico. A simulação modela uma fonte que emite partículas de maneira isotrópica (em todas as direções) e uma abertura localizada acima dessa fonte. A altura da fonte pode variar, bem como o tipo desta fonte (pontual ou volumétrica) e o objetivo da simulação é estimar o valor do ângulo sólido que corresponde à abertura por meio da razão de percas pelo total de partículas emitidas.
 
 Para ilustrar o contexto da simulação, veja o esboço do plano cartesiano abaixo:
 
@@ -27,14 +27,14 @@ A simulação realizada neste projeto é particularmente útil no contexto de c�
 
 
 ## Objetivos
+- __Estimar o valor do ângulo sólido:__ Estimar o valor do ângulo sólido utilizando a técnica de Monte-Carlo.
+- __Analisar o comportamento da vazão de partículas:__ Estudar como a vazão de partículas emitidas por uma fonte isotrópica varia em função da altura da fonte. Este comportamento irá refletir na variação do valor correspondênte ao ângulo sólido conforme a fonte se desloca no eixo z.
 
-- __Analisar o comportamento da vazão de partículas:__ Estudar como a vazão de partículas emitidas por uma fonte isotrópica varia em função da altura da fonte. Esse objetivo inclui a avaliação detalhada dos dados simulados para identificar padrões e tendências.
-
-- __Gerar e interpretar gráficos__ Criar gráficos que representem a relação entre a vazão de partículas e a altura da fonte, permitindo uma visualização clara das mudanças na vazão em função da altura.
+- __Gerar e interpretar gráficos__ Criar gráficos que representem a relação entre o valor do ângulo sólido e a altura da fonte, permitindo uma visualização clara dos comportamentos e tendências da linha.
 
 # Resultados obtidos
 
-Foram realizadas duas simulações distintas para avaliar o comportamento das emissões. A primeira simulação utilizou uma fonte extensa, enquanto a segunda empregou uma fonte pontual. Em ambas as simulações, a fonte emitiu um total de 10 milhões de partículas para cada altura avaliada. Esses experimentos permitiram uma análise detalhada da vazão das partículas através da abertura em função da altura da fonte.
+Foram realizadas duas simulações distintas para avaliar o comportamento das emissões. A primeira simulação utilizou uma fonte extensa, enquanto a segunda empregou uma fonte pontual. Em ambas as simulações, a fonte emitiu um total de 100 milhões de partículas por altura, onde esta altura variou de 0 até 120 (cm) incrementando de 1 em 1 cm.
 
 A seguir estão os detalhes das simulações realizadas:
 
@@ -48,7 +48,7 @@ Para realizar as simulações, é necessário fornecer valores dos elementos per
 
 ## Vazão x Altura
 
-Inicialmente, a vazão de partículas que atravessam a abertura aumenta rapidamente à medida que a altura da fonte é elevada. Isso é representado graficamente, onde notamos um rápido crescimento inicial na vazão. No entanto, conforme a altura continua a aumentar, a taxa de crescimento da vazão começa a se estabilizar, formando uma reta que gradualmente se aproxima de uma linha horizontal. Esse comportamento de **saturação** ocorre porque, além de uma certa altura, a maioria das partículas que poderia atravessar a abertura já o faz, resultando em um aumento marginal na vazão adicional. Assim, o gráfico evidencia que, para alturas mais elevadas, a vazão de partículas atinge um valor quase constante, refletindo a limitação física imposta pela abertura. 
+Inicialmente, a vazão de partículas que atravessam a abertura aumenta rapidamente à medida que a altura da fonte é elevada. Isso é representado graficamente, onde notamos um rápido crescimento inicial na vazão. No entanto, conforme a altura continua a aumentar, a taxa de crescimento da vazão começa a se estabilizar, formando uma reta que gradualmente se aproxima de uma linha horizontal. Esse comportamento de **saturação** ocorre porque, além de uma certa altura, a maioria das partículas que poderia atravessar a abertura já o faz, resultando em um aumento marginal na vazão adicional. Assim, o gráfico evidencia que, para alturas mais elevadas, a vazão de partículas atinge um valor quase constante, que tende a se estabilizar no valor do ângulo sólido total (4 π). Com isso, podemos notar que a relação apresenta um comportamento assintótico, onde a assíntota é justamente o valor do ângulo sólido total, pois em uma altura muito distânte, todas as emissões tendem a ficar de fora da câmara.
 
 Essa análise não apenas valida a configuração geométrica e a natureza isotrópica da fonte, mas também fornece insights valiosos sobre a eficiência de detecção em sistemas de abertura limitada, como câmaras de ionização. Os dados coletados e as visualizações geradas são fundamentais para aprimorar a compreensão desses sistemas, contribuindo para o desenvolvimento de dispositivos mais precisos e eficientes.
 
