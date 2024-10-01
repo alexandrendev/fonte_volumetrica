@@ -1,14 +1,30 @@
 import math
 import numpy as np
 
+medias = []
+desvios = []
 
 for i in range(1, 10**8 + 1):
     dados = np.loadtxt(f'/fonte_volumetrica/arquivos_gerados/volumetrica/{i}.txt')
-    
     vazao = dados[:, 1] # <- 1st column
     
-    ## Estimar valores correspondentes ao angulo sólido
-    ## Obter a média desses valores
+    angulos_solidos = []
+    for value in vazao:
+        angulo_solido = (value / i) * 4*np.pi
+        angulos_solidos.append(angulo_solido)
+        
+
+    media = np.mean(angulos_solidos)
+    medias.append(media)
+    
+    angulo_solido_medio =  media / i * 4*np.pi
+    
+    
+    somatorio = sum((x - media) ** 2 for x in angulos_solidos)
+    
+    desvio = np.sqrt(somatorio / (len(angulos_solidos)-1))
+    
+    
     i *= 10
 
 
