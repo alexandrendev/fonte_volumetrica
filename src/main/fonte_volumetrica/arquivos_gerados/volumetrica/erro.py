@@ -2,10 +2,13 @@ import math
 import numpy as np
 
 
-for i in range(10**8):
+for i in range(1, 10**8 + 1):
     dados = np.loadtxt(f'/fonte_volumetrica/arquivos_gerados/volumetrica/{i}.txt')
     
-    valores = dados[:, 1] # <- 1st column
+    vazao = dados[:, 1] # <- 1st column
+    
+    ## Estimar valores correspondentes ao angulo sólido
+    ## Obter a média desses valores
     i *= 10
 
 
