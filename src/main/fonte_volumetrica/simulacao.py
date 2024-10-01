@@ -7,7 +7,7 @@ def fonte_volumetrica(altura_abertura, raio_abertura, raio_cilindro, altura_cili
     base_cilindro = alturas[0]
     topo_fonte = base_cilindro + altura_cilindro
 
-    arquivo = f'src/main/fonte_volumetrica/arquivos_gerados/volumetrica/inicio:{alturas[0]}.txt'
+    arquivo = f'src/main/fonte_volumetrica/arquivos_gerados/volumetrica/{sorteios}.txt'
 
     for base_cilindro in alturas:  
         pts_no_angulo = 0

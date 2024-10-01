@@ -1,5 +1,8 @@
 import numpy as np
+import time
 # from metodos import *
+
+np.random.seed(int(time.time()))
 
 def sorteia_pontos(centro, altura, raio_abertura):
     theta = np.random.uniform(0,np.pi)
