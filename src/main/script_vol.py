@@ -1,12 +1,7 @@
 import fonte_volumetrica.simulacao as f
 from parallel_utils import*
 from concurrent.futures import ProcessPoolExecutor
-import numpy as np
 
-
-for i in range(10**8):
-    np.loadtxt(f'/fonte_volumetrica/arquivos_gerados/volumetrica/{i}.txt')
-    i *= 10
 # def executar_fonte_volumetrica(parte):
 #     f.fonte_volumetrica(22.9, 7.2, 2.42, 4.1, 10**7, parte)
     
